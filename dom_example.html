@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p class="red-color">Test 1</p>
+    <p class="red-color">Test 2</p>
+    <p class="red-color">Test 3</p>
+
+
+    <!-- First Example -->
+    <h1 id="first-h1">Hello World</h1>
+
+    <button onclick="changeToRed()">Change Color</button>
+
+    <br>
+    <!-- Second Example -->
+     <img src="default.jpg" alt="" width="200" id="img-1">
+     <br>
+     <button onclick="changeImage()">Change Image</button>
+
+    <!-- Third Example -->
+
+    <h2 id="first-h2">Selamat Datang</h2>
+    <br>
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+
+        let text_1 = document.getElementsByClassName("red-color");
+
+        for(let i=0;i<text_1.length;i++){
+            text_1[i].style.color = "blue";
+        }
+
+        function changeToRed(){
+
+            //JavaScript DOM
+            let changeColor = document.querySelector('.red-color');
+            changeColor.style.color = "red";
+
+        }
+
+        function changeImage(){
+
+            let image = document.getElementById("img-1");
+            image.src = "unnamed.png";
+        }
+
+        function changeText(){
+
+            let text = document.getElementById("first-h2");
+            text.innerHTML = "Hi!";
+}
+        
+
+
+    </script>
+</body>
+</html>
+
+<!-- public class Person
+{
+
+    private String name;   // attributes
+    private String address;
+
+    //methods
+    public setName(String name)
+
+} -->
